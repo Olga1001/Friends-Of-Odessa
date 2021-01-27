@@ -1,0 +1,32 @@
+header.header
+    .header-top
+        .container.flex-center-between
+            .align-items-center 
+                each val in ['facebook','instagram','twitter','youtube',]
+                    a.social(href="#")
+                        +icon(val)
+            .align-items-center 
+                p.fs-14.c-gray.mr-10 Language:
+                .select 
+                    .select-item 
+                        img.select-item_img(src="img/common/united-kingdom.svg", alt="britain lang")
+                        p.select-item_span Eanglish
+                    .select-drop
+                        ul.select-list 
+                            li.select-option
+                                a.select-option_link(href="#" data-srcflag="img/common/united-kingdom.svg") Eanglish
+                            li.select-option
+                                a.select-option_link(href="#" data-srcflag="img/common/russia.svg") Russian
+    .header-bottom
+        .container
+            .flex-center-between.bb-1 
+                a.logo(href="#")
+                    img(src="img/common/logo.png", alt="logo")
+                    nav.navtop
+                        ul.menu
+                            each val, index in ['About Us', 'Projects', 'Gallery', 'Volunteer', 'Real-life stories', 'How you can help', 'Contact Us']
+                                li.menu-item(class=index==0 ? 'active': '') 
+                                    a.menu-link(href="#")=val
+                    a.btn(href="#") donate
+
+            

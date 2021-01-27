@@ -1,0 +1,141 @@
+extends layout/main
+
+block variables
+	-var title = 'Главная страница'
+
+block content
+	section.offer-section.align-items-center 
+		include modules/header/header
+		.offer_bg
+			img.offer_bg-img(src="img/common/kid_bg.jpg", alt="image")
+		
+		
+		button.arrow-prev.arrow-slide(type="button")
+			+icon("arrow_left")
+		button.arrow-next.arrow-slide(type="button")
+			+icon("arrow_right")
+		.container.offer-content
+			.circle-yellow
+				p Connect <br> Your Life <br> With
+
+			h1.c-white.offer-title a child Who <br> Needs Your <br> Help!
+				+icon("arrow_01", "arrow-dashed")
+
+			.circle-border
+				.circle-blue
+					.circle-blue_content
+						img.circle-blue_icon(src="img/common/star.png", alt="star")
+						p.fw-medium.c-white.lh-22 Help those who are ill and living in poverty feel human again by giving them the gift of dignity through supporting aid, shelter, education and healthcare.
+						a.btn.w-100(href="#") donate Now
+	section.about-section
+		.container
+			h2.title
+				span.title-span About us
+				| Who <br> We Are
+				span.title_circle-big 
+					span.title_circle-small
+			.about-content
+				p.mb-25 Lorem ipsum dolor sit amet, nam ad reque tempor. Id errem bonorum ancillae vis, mel te feugiat apeirian imperdiet. Everti volutpat adolescens sit cu. Mel postulant adolescens an, nonumes elaboraret referrentur te eos.
+				p.mb-25 Et quo esse nostrum invenire, quo no primis voluptua explicari. Tation legimus ut mei. Vulputate voluptaria signiferumque vis no, no semper dolorem copiosae quo.
+			img.about-img(src="img/common/collage2.png", alt="image")
+
+	section.mission-section
+		.container 
+			.flex-center-end.text-right.pr-lg-90
+				p.max-535.pt-10 Lorem ipsum dolor sit amet, qui an odio lorem maiestatis. Scripta accumsan mel at. His nominati splendide ex, no putent salutatus eos, at tota liberavisse his. Ea vide aliquip lucilius his. Cu erat contentiones eam.
+				+icon("arrow_02")
+				h2.title.right
+					span.title-span our mission
+					| Who Do  <br> We Help
+					span.title_circle-big.bg-white 
+						span.title_circle-small.bg-yellow
+			.flex-wrap
+				- 
+					card = [
+						{
+							bgColor: 'bg-purple',
+							icon: 'baby',
+							title: 'Children Care',
+							text: 'Lorem ipsum dolor sit amet, qui an odio lorem maiestatis. Scripta accumsan mel at. His nominati splendide ex.'
+						},
+						{
+							bgColor: 'bg-blue2',
+							icon: 'old-woman',
+							title: 'Old People Care',
+							text: 'Ea eum vivendo salutandi, vitae quidam id sea. Brute aeque eos ea, vis eu harum reformidans, sed omnesque explicari cu.'
+						},
+						{
+							bgColor: 'bg-yellow',
+							icon: 'family',
+							title: 'Low-income families',
+							text: 'Ei dico dolore consequuntur vix, ut nam probo diceret, labores habemus id vix. Sed democritum eloquentiam et.'
+						},
+					]
+				each val in card 
+					a.card-mission(href="#")
+						object
+							.card-mission_border 
+								.card-mission_border-color(class=val.bgColor) 
+									+icon(val.icon)
+							p.fs-18.c-blue.fw-semi.mb-10=val.title
+							p=val.text
+
+							+icon("long-arrow")
+	section.do-section
+		.container 
+			h2.title.title2
+				span.title-span our Projects
+				| What We Do
+				span.title_circle-big.bg-white2 
+					span.title_circle-small
+
+			.flex-wrap
+				- 
+					cardDo = [
+						{
+							img: 'layer_99_3815.jpg',
+							title: 'Treatment with ',
+							title2: 'a pressure chamber'
+						},
+						{
+							img: 'layer_99_3815.jpg',
+							title: 'Help for',
+							title2: 'orphanages'
+						},
+						{
+							img: 'layer_99_3815.jpg',
+							title: 'Assistance to ',
+							title2: 'nursing homes'
+						}
+					]
+				each val in cardDo 
+					a.card-do(href="#") 
+						object
+							.card-do_border 
+								img.card-do_img(src="img/common/"+val.img, alt="image")
+							p.fs-18.fw-semi.c-blue=val.title
+								span.d-block=val.title2
+	section.donate-section
+		.container.flex-center-end.relative
+			.donate-border
+				img(src="img/common/ellipse_4_copy_6_3819.png", alt="image")
+			.donate-right
+				.circle-yellow
+					p Everyone<br>has power
+				h2.titleh1 
+					span.titleh1-pl to
+					span.d-block change
+					span.d-block the world
+					+icon("handshake")
+				a.btn.max-w-255.w-100.btn2(href="#") donate Now
+				
+			
+
+				
+
+			
+
+
+
+
+
