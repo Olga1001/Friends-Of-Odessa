@@ -109,10 +109,10 @@ block content
 						}
 					]
 				each val in cardDo 
-					a.card-do(href="#") 
+					a.card-two(href="#") 
 						object
-							.card-do_border 
-								img.card-do_img(src="img/common/"+val.img, alt="image")
+							.card-two_border 
+								img.card-two_img(src="img/common/"+val.img, alt="image")
 							p.fs-18.fw-semi.c-blue=val.title
 								span.d-block=val.title2
 	section.donate-section
@@ -128,7 +128,83 @@ block content
 					span.d-block the world
 					+icon("handshake")
 				a.btn.max-w-255.w-100.btn2(href="#") donate Now
+	section.join-section
+		.container
+			.flex-wrap.pl-lg-100
+				h2.title
+					span.title-span join us
+					| Other<br>ways to<br>help
+					span.title_circle-big.bg-blue2 
+						span.title_circle-small.bg-yellow
+				.pb-20.align-items-center
+					+icon("arrow_03")
+					p.max-535 Lorem ipsum dolor sit amet, qui an odio lorem maiestatis. Scripta accumsan mel at. His nominati splendide ex, no putent salutatus eos, at tota liberavisse his. Ea vide aliquip lucilius his. Cu erat contentiones eam.
 				
+
+			.flex-wrap
+				- 
+					cardJoin = [
+						{
+							img: 'layer_99_3815.jpg',
+							title: 'Volunteer with us',
+							text: 'Support children and young people while boosting your skills and meeting new people'
+						},
+						{
+							img: 'layer_99_3815.jpg',
+							title: 'Fundraise with us',
+							text: 'Run a marathon. Organise a tea party. Join a sleepout. Find ways to have fun, bring your community together or challenge yourself.'
+						},
+						{
+							img: 'layer_99_3815.jpg',
+							title: 'Campaign with us',
+							text: 'By joining a campaign, you can make a real difference to the lives of children and young people'
+						}
+					]
+				each val in cardJoin 
+					a.card-two(href="#") 
+						object
+							.card-two_border 
+								img.card-two_img(src="img/common/"+val.img, alt="image")
+							p.fs-18.fw-semi.c-blue.mb-10=val.title
+							p.c-brown=val.text
+	section.stories-section
+		.container 
+			h2.title.title2.bg-white2-before
+				span.title-span testemonials
+				| Real-life<br>stories
+				span.title_circle-big.bg-white
+					span.title_circle-small
+
+			.flex-wrap.stories-cards.mb-30
+				.col-50 
+					.card-stories.card-stories_big.mb-30
+						a.card-stories_img(href="#")
+							img(src="img/common/rectangle_21_3902.jpg", alt="image")
+							+icon("arrow_04")
+						.card-stories_content
+							a.fs-18.fw-semi.mb-10(href="#") Vim te dicant invidunt, ad mea suscipit placerat salutandi. 
+							p Ei munere laoreet vim. Eam illum tibique ad. In iuvaret quaeque recusabo eam. Mei partem ...
+				.col-50 
+					.card-stories.card-stories_list.d-flex.mb-30 
+						.card-stories_content 
+							a.fs-18.fw-semi.mb-10(href="#") Has no reque ullum forensibus, pri error. 
+							p Ad ullum assum libris nec. Stet graecis lobortis ut qui, mei dico graeci inciderint an. Eam ne saperet dele ...
+						
+						a.card-stories_img(href="#")
+							img(src="img/common/rectangle_21_3902.jpg", alt="image")
+							+icon("arrow_04")
+					.card-stories.card-stories_list.d-flex.mb-30 
+						.card-stories_content 
+							a.fs-18.fw-semi.mb-10(href="#") Ius putent detraxit consequat in, ex eos suas causae officiis.
+							p Complectitur intellegebat vis id, illud aliquam pri et. Decore iisque oporteat ...
+						
+						a.card-stories_img(href="#")
+							img(src="img/common/rectangle_21_3902.jpg", alt="image")
+							+icon("arrow_04")
+			.justify-content-center
+				a.btn.btn2.bg-yellow(href="#") read all stories
+
+
 			
 
 				

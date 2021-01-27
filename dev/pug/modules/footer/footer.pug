@@ -1,2 +1,29 @@
 footer.footer
     .container 
+        .justify-content-between.flex-wrap 
+            .flex-wrap.justify-content-between 
+                .footer-col 
+                    a.logo(href="#")
+                        img(src="img/common/logo2.png", alt="logo")
+                    p.fs-18.c-blue.fw-bold.mb-10 Safe and happy childhood
+                    p Action for Children protects and supports children and young people, providing practical and emotional care and support, ensuring their voices are heard, and campaigning to bring lasting improvements to their lives.
+                nav.navfooter 
+                    ul.menufooter
+                        each val, index in ['Home' ,'About Us','Projects','Gallery','Volunteer','Real-life stories','How you can help','Contact Us']
+                            li.menufooter-item 
+                                a.menufooter-link(href="#")=val
+
+            .footer-last
+                .make-difference
+                    p.fs-30.fw-bold.text-up.c-blue Make a<br>difference
+                    .flex-end-between
+                        .circle-yellow
+                            p help us<br>change<br>lives
+                        a.btn.c-blue.ml-auto(href="#") Donate Now
+        .footer-bottom
+            .flex-center-between 
+                p.c-gray.fs-14 Registered address, 3 The Boulevard, Ascot Road, Watford, WD18 8AG. Action for Children is a charity (1097940/SC038092) and a company limited by guarantee (England and Wales No. 04764232). © Action for Children 2021
+                .align-items-center 
+                    each val in ['facebook','instagram','twitter','youtube',]
+                        a.social(href="#")
+                            +icon(val)

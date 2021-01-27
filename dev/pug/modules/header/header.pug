@@ -22,11 +22,11 @@ header.header
             .flex-center-between.bb-1 
                 a.logo(href="#")
                     img(src="img/common/logo.png", alt="logo")
-                    nav.navtop
-                        ul.menu
-                            each val, index in ['About Us', 'Projects', 'Gallery', 'Volunteer', 'Real-life stories', 'How you can help', 'Contact Us']
-                                li.menu-item(class=index==0 ? 'active': '') 
-                                    a.menu-link(href="#")=val
-                    a.btn(href="#") donate
+                nav.navtop
+                    ul.menu
+                        each val, index in ['About Us', 'Projects', 'Gallery', 'Volunteer', 'Real-life stories', 'How you can help', 'Contact Us']
+                            li.menu-item(class=index==0 ? 'active': '') 
+                                a.menu-link(href="#")=val
+                a.btn(href="#") donate
 
             

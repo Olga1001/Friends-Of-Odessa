@@ -294,13 +294,24 @@ h1
   .title_circle-small
     top: auto 
     bottom: calc(100% - 10px)
+  &.bg-white2-before
+    &:before
+      top: 25%
+    .title_circle-big 
+      top: 30%
 
+.bg-white2-before:before
+  background-color: $bg-white2
 
 @import "modules/modules"
+
 
 .w-100 
   width: 100%
 
+.col-50 
+  width: 50% 
+  
 .max-w-255
   max-width: 255px
 
