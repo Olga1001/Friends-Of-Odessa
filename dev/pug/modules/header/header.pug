@@ -6,11 +6,11 @@ header.header
                     a.social(href="#")
                         +icon(val)
             .align-items-center 
-                p.fs-14.c-gray.mr-10 Language:
+                p.fs-14.c-gray.mr-10.d-sm-block.d-none Language:
                 .select 
                     .select-item 
                         img.select-item_img(src="img/common/united-kingdom.svg", alt="britain lang")
-                        p.select-item_span Eanglish
+                        p.select-item_span.d-sm-block.d-none Eanglish
                     .select-drop
                         ul.select-list 
                             li.select-option
@@ -20,6 +20,11 @@ header.header
     .header-bottom
         .container
             .flex-center-between.bb-1 
+                .burger-item
+                    button.burger(type="button")
+                        span.burger-line.burger-line-top
+                        span.burger-line.burger-line-center
+                        span.burger-line.burger-line-bottom
                 a.logo(href="#")
                     img(src="img/common/logo.png", alt="logo")
                 nav.navtop

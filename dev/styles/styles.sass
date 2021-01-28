@@ -8,6 +8,7 @@ html
   font-family: "Montserrat", sans-serif
   font-size: 16px
   height: 100%
+  overflow-x: hidden
 
 body 
   height: 100%
@@ -19,6 +20,7 @@ body
   font-family: "Montserrat", sans-serif
   font-style: normal
   color: $brown
+  overflow-x: hidden
 
 *, *::before, *::after
   box-sizing: border-box
@@ -213,12 +215,13 @@ h1
   &-drop 
     position: absolute
     top: 0
-    left: 0
+    right: 0
     background-color: $bg-brown
     padding-top: 30px
     z-index: -1
     display: none
-    width: 100%
+    width: max-content
+    min-width: 100%
   &-list 
     padding: 5px
   &-option_link
@@ -277,7 +280,7 @@ h1
 .title2 
   text-align: center 
   display: block 
-  margin: 0 auto 
+  margin: 0 auto !important
   width: fit-content
   z-index: 3
   position: relative
@@ -305,12 +308,11 @@ h1
 
 @import "modules/modules"
 
+.col-llg-50 
+  width: 100%
 
 .w-100 
   width: 100%
-
-.col-50 
-  width: 50% 
   
 .max-w-255
   max-width: 255px

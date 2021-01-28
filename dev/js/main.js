@@ -14,5 +14,12 @@ $(document).ready(function () {
        $(this).closest(".select").find(".select-item_span ").text(langText);
 
     });
+
+    // burger, menu
+    $(".burger").click(function () {
+        $(this).toggleClass('active');
+        $(".navtop").toggleClass('active');
+    });
+
  
 });

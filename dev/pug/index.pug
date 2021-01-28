@@ -18,15 +18,15 @@ block content
 			.circle-yellow
 				p Connect <br> Your Life <br> With
 
-			h1.c-white.offer-title a child Who <br> Needs Your <br> Help!
+			h1.c-white.offer-title a child <br class="d-sm-none"> Who <br class="d-sm-block d-none"> Needs <br class="d-sm-none"> Your <br class="d-sm-block d-none"> Help!
 				+icon("arrow_01", "arrow-dashed")
-
-			.circle-border
-				.circle-blue
-					.circle-blue_content
-						img.circle-blue_icon(src="img/common/star.png", alt="star")
-						p.fw-medium.c-white.lh-22 Help those who are ill and living in poverty feel human again by giving them the gift of dignity through supporting aid, shelter, education and healthcare.
-						a.btn.w-100(href="#") donate Now
+			.circle-big
+				.circle-border
+					.circle-blue
+						.circle-blue_content
+							img.circle-blue_icon(src="img/common/star.png", alt="star")
+							p.fw-medium.c-white.lh-22 Help those who are ill and living in poverty feel human again by giving them the gift of dignity through supporting aid, shelter, education and healthcare.
+							a.btn.w-100(href="#") donate Now
 	section.about-section
 		.container
 			h2.title
@@ -37,18 +37,20 @@ block content
 			.about-content
 				p.mb-25 Lorem ipsum dolor sit amet, nam ad reque tempor. Id errem bonorum ancillae vis, mel te feugiat apeirian imperdiet. Everti volutpat adolescens sit cu. Mel postulant adolescens an, nonumes elaboraret referrentur te eos.
 				p.mb-25 Et quo esse nostrum invenire, quo no primis voluptua explicari. Tation legimus ut mei. Vulputate voluptaria signiferumque vis no, no semper dolorem copiosae quo.
-			img.about-img(src="img/common/collage2.png", alt="image")
+			.about-img
+				img(src="img/common/collage2.png", alt="image")
 
 	section.mission-section
 		.container 
-			.flex-center-end.text-right.pr-lg-90
+			.mission-top
 				p.max-535.pt-10 Lorem ipsum dolor sit amet, qui an odio lorem maiestatis. Scripta accumsan mel at. His nominati splendide ex, no putent salutatus eos, at tota liberavisse his. Ea vide aliquip lucilius his. Cu erat contentiones eam.
-				+icon("arrow_02")
-				h2.title.right
-					span.title-span our mission
-					| Who Do  <br> We Help
-					span.title_circle-big.bg-white 
-						span.title_circle-small.bg-yellow
+				.align-items-center
+					+icon("arrow_02")
+					h2.title.right
+						span.title-span our mission
+						| Who Do  <br> We Help
+						span.title_circle-big.bg-white 
+							span.title_circle-small.bg-yellow
 			.flex-wrap
 				- 
 					card = [
@@ -78,14 +80,14 @@ block content
 								.card-mission_border-color(class=val.bgColor) 
 									+icon(val.icon)
 							p.fs-18.c-blue.fw-semi.mb-10=val.title
-							p=val.text
+							p.c-brown=val.text
 
 							+icon("long-arrow")
 	section.do-section
 		.container 
 			h2.title.title2
 				span.title-span our Projects
-				| What We Do
+				| What <br class="d-sm-none"> We Do
 				span.title_circle-big.bg-white2 
 					span.title_circle-small
 
@@ -116,7 +118,7 @@ block content
 							p.fs-18.fw-semi.c-blue=val.title
 								span.d-block=val.title2
 	section.donate-section
-		.container.flex-center-end.relative
+		.container.flex-lg-center-end.relative
 			.donate-border
 				img(src="img/common/ellipse_4_copy_6_3819.png", alt="image")
 			.donate-right
@@ -130,14 +132,16 @@ block content
 				a.btn.max-w-255.w-100.btn2(href="#") donate Now
 	section.join-section
 		.container
-			.flex-wrap.pl-lg-100
-				h2.title
-					span.title-span join us
-					| Other<br>ways to<br>help
-					span.title_circle-big.bg-blue2 
-						span.title_circle-small.bg-yellow
-				.pb-20.align-items-center
-					+icon("arrow_03")
+			.join-row
+				.align-items-center
+					h2.title
+						span.title-span join us
+						| Other<br>ways to<br>help
+						span.title_circle-big.bg-blue2 
+							span.title_circle-small.bg-yellow
+					.pb-20
+						+icon("arrow_03")
+				.pb-20
 					p.max-535 Lorem ipsum dolor sit amet, qui an odio lorem maiestatis. Scripta accumsan mel at. His nominati splendide ex, no putent salutatus eos, at tota liberavisse his. Ea vide aliquip lucilius his. Cu erat contentiones eam.
 				
 
@@ -176,7 +180,7 @@ block content
 					span.title_circle-small
 
 			.flex-wrap.stories-cards.mb-30
-				.col-50 
+				.col-llg-50 
 					.card-stories.card-stories_big.mb-30
 						a.card-stories_img(href="#")
 							img(src="img/common/rectangle_21_3902.jpg", alt="image")
@@ -184,8 +188,8 @@ block content
 						.card-stories_content
 							a.fs-18.fw-semi.mb-10(href="#") Vim te dicant invidunt, ad mea suscipit placerat salutandi. 
 							p Ei munere laoreet vim. Eam illum tibique ad. In iuvaret quaeque recusabo eam. Mei partem ...
-				.col-50 
-					.card-stories.card-stories_list.d-flex.mb-30 
+				.col-llg-50  
+					.card-stories.card-stories_list.justify-content-between.mb-30 
 						.card-stories_content 
 							a.fs-18.fw-semi.mb-10(href="#") Has no reque ullum forensibus, pri error. 
 							p Ad ullum assum libris nec. Stet graecis lobortis ut qui, mei dico graeci inciderint an. Eam ne saperet dele ...
@@ -193,7 +197,7 @@ block content
 						a.card-stories_img(href="#")
 							img(src="img/common/rectangle_21_3902.jpg", alt="image")
 							+icon("arrow_04")
-					.card-stories.card-stories_list.d-flex.mb-30 
+					.card-stories.card-stories_list.justify-content-between.mb-30 
 						.card-stories_content 
 							a.fs-18.fw-semi.mb-10(href="#") Ius putent detraxit consequat in, ex eos suas causae officiis.
 							p Complectitur intellegebat vis id, illud aliquam pri et. Decore iisque oporteat ...

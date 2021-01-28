@@ -6,6 +6,10 @@
     &-top
         background-color: $bg-brown
         padding: 5px 0
+        .container
+            min-height: 30px
+    &-bottom .container .bb-1
+        min-height: 79px
 
 .bb-1 
     border-bottom: 1px solid rgba($white, 0.2)
@@ -37,38 +41,45 @@
         &.active .menu-link
             border-bottom-color: $yellow
             font-weight: 600
-    
-// .burger
-//     width: 24px
-//     height: 18px
-//     position: relative
-//     flex-shrink: 0
-//     z-index: 9
-//     &-line
-//         background-color: #002c4f
-//         border-radius: 1.5px
-//         +centerX
-//         height: 3px
-//         width: 100%
-//         transition: all 0.3s ease
-//         &-top
-//             top: 0
-//         &-center
-//             top: 50% 
-//             transform: translate(-50%,-50%)
-//         &-bottom
-//             bottom: 0
-//     &.active 
-//         .burger-line-top
-//             top: 50% 
-//             transform: translate(-50%,-50%) rotate(225deg)
-//         .burger-line-center
-//             opacity: 0
-//         .burger-line-bottom
-//             top: 50% 
-//             transform: translate(-50%,-50%) rotate(-225deg)
+
+.burger-item   
+    display: none
+    width: 24px
+
+.burger
+    width: 24px
+    height: 18px
+    position: relative
+    flex-shrink: 0
+    z-index: 9
+    &-line
+        background-color: $bg-white
+        border-radius: 1.5px
+        +centerX
+        height: 3px
+        width: 100%
+        transition: all 0.3s ease
+        &-top
+            top: 0
+        &-center
+            top: 50% 
+            transform: translate(-50%,-50%)
+        &-bottom
+            bottom: 0
+    &.active 
+        position: fixed
+        top: 70px
+        left: 15px
+        .burger-line-top
+            top: 50% 
+            transform: translate(-50%,-50%) rotate(225deg)
+        .burger-line-center
+            opacity: 0
+        .burger-line-bottom
+            top: 50% 
+            transform: translate(-50%,-50%) rotate(-225deg)
 
 .logo
     display: block
-    hwight: 46px 
+    height: 46px 
     width: 160px        

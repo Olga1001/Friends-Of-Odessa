@@ -1,7 +1,7 @@
 footer.footer
     .container 
-        .justify-content-between.flex-wrap 
-            .flex-wrap.justify-content-between 
+        .justify-content-between.flex-wrap.footer-left 
+            .flex-wrap.justify-content-between.footer-row 
                 .footer-col 
                     a.logo(href="#")
                         img(src="img/common/logo2.png", alt="logo")
@@ -19,11 +19,11 @@ footer.footer
                     .flex-end-between
                         .circle-yellow
                             p help us<br>change<br>lives
-                        a.btn.c-blue.ml-auto(href="#") Donate Now
+                        a.btn.ml-auto(href="#") Donate Now
         .footer-bottom
-            .flex-center-between 
+            .flex-md-center-between 
                 p.c-gray.fs-14 Registered address, 3 The Boulevard, Ascot Road, Watford, WD18 8AG. Action for Children is a charity (1097940/SC038092) and a company limited by guarantee (England and Wales No. 04764232). © Action for Children 2021
-                .align-items-center 
+                .flex-center-center 
                     each val in ['facebook','instagram','twitter','youtube',]
                         a.social(href="#")
                             +icon(val)

@@ -4,100 +4,321 @@
 
 /* Large Devices, Wide Screens */
 
-@media only screen and (min-width : 1200px)   
-    // .d-xl-block
-    //     display: block
-    // .align-xl-items-end
-    //     +d-flex(strat, flex-end)
-    // .d-xl-none
-    //     display: none
-    // .pt-xl-0
-    //     padding-top: 0
-    // .px-xl-15 
-    //     padding-right: 15px 
-    //     padding-left: 15px
-  
-@media only screen and (min-width : 992px)               
-    // .flex-lg-center-between
-    //     +d-flex(space-between, center) 
-    // .align-lg-items-end
-    //     display: flex 
-    //     align-items: flex-end
-    // .flex-lg-end-between
-    //     +d-flex(space-between, flex-end) 
-    // .d-lg-block
-    //     display: block
-    // .d-lg-none 
-    //     display: none
-    // .stucky-lg
-    //     position: sticky 
-    //     top: 90px 
-    // .mr-lg-20
-    //     margin-right: 20px
-    // .w-lg-50
-    //     width: 50%
-    // .flex-lg-row
-    //     display: flex 
-    //     flex-direction: row
-    // .ml-lg-auto 
-    //     margin-left: auto
-    // .mt-lg-0
-    //     margin-top: 0
+@media only screen and (min-width : 992px)     
     
     .pr-lg-90
         padding-right: 90px
     .pl-lg-100
         padding-left: 100px
+    .flex-lg-center-end
+        +d-flex(center,flex-end)
         
 @media only screen and (min-width : 768px)
-    // .flex-md-center-between 
-    //     +d-flex(space-between, center) 
-    // .align-md-items-end
-    //     display: flex 
-    //     align-items: flex-end
-    // .d-md-block
-    //     display: block
-    // .d-md-none
-    //     display: none
-    // .align-md-items-center
-    //     display: flex 
-    //     align-items: center
-    // .justify-md-content-center
-    //     +d-flex(center, flex-start) 
-    
+    .flex-md-center-between 
+        +d-flex(space-between, center) 
 @media only screen and (min-width : 576px)
-    // .align-sm-items-center
-    //     display: flex 
-    //     align-items: center
-    // .d-sm-block 
-    //     display: block
-    // .d-sm-flex 
-    //     display: flex
-    // .d-sm-none
-    //     display: none!important
-    // .my-sm-0
-    //     margin-top: 0
-    //     margin-bottom: 0
-    // .pl-sm-20
-    //     padding-left: 20px
-    // .w-sm-50
-    //     width: 50%
-    // .pb-sm-20
-    //     padding-bottom: 20px
-    // .py-sm-20
-    //     padding-top: 20px 
-    //     padding-bottom: 20px
-    // .py-sm-3
-    //     padding-top: 16px 
-    //     padding-bottom: 16px
-    // .mr-sm-8
-    //     margin-right: 8px
-    // .fs-sm-16 
-    //     font-size: 16px 
-    // .my-sm-55
-    //     margin-top: 55px 
-    //     margin-bottom: 55px
+    .d-sm-block 
+        display: block
+    .d-sm-none
+        display: none!important
+@media only screen and (min-width : 1101px)
+    .col-llg-50 
+        width: 50%
+
+@media only screen and (max-width : 1400px)
+    .arrow-slide, .arrow-slide svg
+        width: 35px
+    .arrow-prev
+        left: 10px
+    .arrow-next
+        right: 10px
+
+@media only screen and (max-width : 1139px)
+    .footer-row 
+        display: block
+    .footer-col 
+        margin-bottom: 30px
+    .footer-left 
+        align-items: flex-end
+
+@media only screen and (max-width : 1100px)
+    .burger-item  
+        display: block
+    .navtop 
+        position: fixed 
+        left: 0 
+        top: 0
+        z-index: 8
+        width: 75%
+        height: 100%
+        background-color: $bg-brown
+        padding: 100px 0 
+        transform: translateX(-100%)
+        transition: all 0.3s ease
+        opacity: 0 
+        pointer-events: none 
+        max-width: 500px
+        &.active 
+            opacity: 1
+            pointer-events: auto 
+            transform: translateX(0)
+
+    .menu 
+        display: block
+        &-item
+            margin: 0
+    .menu-link 
+        padding: 26px 40px
+        border-bottom: 1px solid rgba($bg-white, 0.3)
+    .donate-border
+        right: 50%
+    .card-stories
+        margin: 0 0 30px 0
+    .about-img
+        right: -15%
+    .title 
+        margin: 0 45px
+    .title_circle-big 
+        left: -33px
+        top: -57px
+    .title.right 
+        margin: 0 72px 0 0
+        .title_circle-big 
+            right: -60px
+    .icon-arrow_02, .icon-arrow_03
+        width: 40px
+        height: 40px
+        margin: 0 22px 0 40px
+    .card-stories_big
+        flex-direction: row-reverse
+        +d-flex(space-between, flex-start)
+    .card-stories_big .card-stories_img
+        width: 255px
+        height: 225px
+        display: block
+
+@media only screen and (max-width : 991px)
+    .about-img 
+        position: initial
+        transform: none
+        width: 600px
+        height: 600px
+        margin: 0 auto -120px
+    .about-content 
+        max-width: 100%
+    .about-section .container
+        max-width: 100%
+    .card-two_border
+        width: 220px
+        height: 220px
+    .donate-border
+        // position: initial 
+        transform: translateX(50%)
+        top: -270px
+        margin: 0 auto
+    .donate-section .container
+        padding-top: 0
+        margin-top: 158px
+        padding-bottom: 70px
+    .donate-right
+        padding-top: 575px
+        width: fit-content
+    .titleh1 .icon-handshake
+        right: 0
+    .mission-top 
+        flex-direction: column-reverse
+        padding-right: 0
+        .max-535 
+            max-width: 100% 
+            padding-top: 55px
+    .donate-right
+        margin: 0
+    .join-row
+        flex-direction: column
+        padding-left: 0
+        align-items: flex-start
+        .title 
+            margin-bottom: 55px
+        .max-535 
+            max-width: 100%
+    .icon-arrow_02, .icon-arrow_03
+        margin: 0 30px 0 0
+    .icon-arrow_02
+        transform: rotate(-90deg)
+    .icon-arrow_03
+        transform: rotate(90deg)
+    .join-section
+        padding: 97px 0 200px
+@media only screen and (max-width : 767px)
+    .logo
+        width: 113px
+        height: 34px
+    .header .btn 
+        line-height: 37px
+        font-size: 14px 
+        padding: 0 20px
+    .arrow-slide
+        display: none
+    .card-mission, .card-two
+        width: 100%
+        margin-top: 60px
+    .card-two_border 
+        width: 270px
+        height: 270px
+        margin: 0 auto 20px
+    .offer-content .circle-yellow
+        margin-top: 245px
+    .do-section .card-two
+        margin-top: 75px
+    .footer .social
+        margin-top: 40px
+    .footer-bottom 
+        padding: 40px 0
         
+@media only screen and (max-width : 600px)
+    .offer-title
+        font-size: 42px
+        line-height: 40px
 
 @media only screen and (max-width : 575px)
-    // 
+    .arrow-dashed
+        display: none
+    .select img
+        margin-right: 0
+    .offer-content .circle-yellow
+        margin-top: 245px
+        width: 145px 
+        height: 145px
+        margin-left: -15px
+        p 
+            font-size: 20px
+            line-height: 20px
+    .offer-title
+        margin-left: 0
+    .circle-border
+        margin: 0 auto 
+        width: 442px
+        height: 442px
+    .circle-big
+        margin: 20px 0 -310px -61px
+        width: calc(100% + 122px)
+    .offer-section
+        min-height: 720px
+    .offer_bg
+        transform: scale(1.4)
+    .offer_bg-img 
+        object-position: 60%
+    .offer-title
+        margin-top: -30px
+    .circle-blue
+        padding: 44px 75px 0
+    .circle-blue_content
+        max-width: 100%
+    .offer-section
+        margin-bottom: 240px
+    .circle-blue .btn
+        max-width: 235px
+    .title 
+        font-size: 35px
+        line-height: 35px
+    .title_circle-big 
+        width: 112px
+        height: 112px
+    .title_circle-small
+        width: 30px 
+        height: 30px
+    .title-span
+        margin-bottom: 10px
+    .title_circle-big
+        top: -40px
+    .about-img
+        width: calc(100% + 101px)
+        height: fit-content
+        margin: -20px 0 -20px -50.5px
+        img 
+            height: 391px
+            width: 391px
+            margin: 0 auto
+            flex-shrink: 0
+    .about-section .container
+        padding-bottom: 0
+    .title.right
+        margin: 0 59px 0 0
+    .icon-arrow_02, .icon-arrow_03
+        width: 30px
+        height: 30px
+    .mission-top .max-535 
+        text-align: left
+    .title2:before
+        width: 291px
+        height: 291px
+    .title2 .title_circle-big
+        width: 140px 
+        height: 140px
+    .title2 .title_circle-small
+        width: 38px 
+        height: 38px
+    .title2 
+        margin: -100px auto 0!important
+    .mission-section
+        padding-bottom: 140px
+    .donate-border 
+        width: 470px
+        height: 470px
+        border-width: 40px
+    .donate-right
+        padding-top: 245px
+    .circle-yellow
+        width: 130px 
+        height: 130px
+        margin-left: -15px
+        p 
+            font-size: 16px 
+            line-height: 16px
+    .titleh1 
+        font-size: 42px
+        line-height: 45px
+        margin-top: -89px
+        padding-left: 5px
+    .titleh1-pl
+        padding-left: 105px
+    .icon-handshake 
+        width: 81px
+        height: 81px
+    .titleh1 .icon-handshake 
+        bottom: calc(100% - 25px)
+    .card-stories
+        flex-direction: column-reverse
+        &.card-stories_big
+            flex-direction: column
+    .card-stories_img
+        width: 100%!important
+        height: 71.8vw!important
+    .card-stories_content 
+        padding: 25px 25px 40px 25px
+    .footer-col
+        margin-bottom: 50px
+        margin-right: 0
+    .footer-last 
+        margin-top: 30px
+        margin-left: -140px 
+        // width: calc(100% + 122px)
+    .footer
+        padding-top: 60px
+        .logo 
+            width: 160px
+            height: 47px
+            margin: 0 auto 32px
+    .make-difference
+        padding: 155px 116px 0 137px
+    .make-difference .btn
+        font-size: 14px
+        line-height: 50px 
+        padding: 0 30px
+    .make-difference .circle-yellow
+        margin-left: -30px
+        margin-right: 20px
+        padding-left: 14px
+@media only screen and (max-width : 375px)
+    .circle-blue
+        padding: 63px 75px 0 45px
